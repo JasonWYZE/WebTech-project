@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" 
-          href="https://fonts.googleapis.com/css?family=Grechen Fuemen">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Grechen Fuemen"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="styles/home.css"/>
-
+    <link rel="stylesheet" href="styles/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
+
   <body>
-    <div id = "nav">
-      <header>
-        <ul id="navbar">
-          <li><a href="#">Home</a></li>
-          <li><a href="https://github.com/JasonWYZE">Github</a></li>
-          <li>
-            <a href="proposal.html"
-              >Proposal</a
-            >
-          </li>
-          <li class="dropdown">
-            <button class="droptn">Projects</button>
-            <div class="dropdown-content">
-              <a href="hw2-1.html">Data Visiualization</a>
-              <a href="hw2-2.html">Linear Regression</a>
-              <a href="hw2-bbc.html">HW2-BBC</a>
-            </div>
-          </li>
-        </ul>
-      </header>
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          Courses
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          Projects
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <a href="https://github.com/JasonWYZE">Github</a>
+
+      <div class="search-container">
+        <form action="">
+          <input type="text" placeholder="Search.." name="search" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div style="padding-left: 16px">
+      <p>
+        I am Jason Wang, an Babson College studnet majored in data analyst and
+        information technology managment.
+      </p>
+      <p>Resize the browser window to see the responsive effect.</p>
     </div>
   </body>
-  </html>
+</html>
