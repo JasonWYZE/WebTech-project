@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Project Proposal</title>
+    <link rel="stylesheet" href="styles/pandas.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    
+  
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          Courses
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          Projects
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <a href="https://github.com/JasonWYZE">Github</a>
+
+      <div class="search-container">
+        <form action="">
+          <input type="text" placeholder="Search.." name="search" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+
+    <div id = "main">
+      <h2>Pandas</h2>
+      <p>Pandas is the one of most useful package in the python that used for data analyst. By reading data file through index and columns, it allow us to process and deal with data. We can quickly apply complex conversion or filter data in this package. It is the first Python package I learned when I started my data analyst adventure.</p>
+      <p> Pandas, Numpy, and Matplotlib are three most important and base package in data analyst. Sklearn is another a strong package for machine learning and build models. However, I believe everyone who is interested in data analyst can learn a lot in these three packages.</p>
+      <h3>Import Pandas</h3>
+      <pre>
+        <code>
+          import pandas as pd;
+        </code>
+      </pre>
+      <p>This is the standard way that importing pandas and naming it as pd since it is simpler. However, before importing it, make sure you already download and install with Anaconda. </p>
+      <h3>How to import data in pandas and data Type</h3>
+      <pre>
+        <code>
+          df = pd.read_csv('titanic.csv');
+        </code>
+      </pre>
+      <p>The code above show the way how to read a csv file. By reading this csv file and stored it in the dataframe and named it df. I used the famous titanic case that predict the factor influence who survivied at the end. This csv file you can find in Kaggle,</p>
+      <p>There are two types of data in Pandas, series and dataframe. Series is a 1-D data type and each of element is with a label. Dataframe is a 2-D data structure. It can stored multiple type of data.</p>
+      <p>We can start to check this data file before we analyze it. For instance, if we want to look at the first x rows data or last x rows. </p>
+      <pre>
+        <code>
+          df.head(10);
+          # read the first 10 rows
+          df.tail(10);
+          # read the last 10 rows
+        </code>
+      </pre>
+      <p>There are multiple way to access a single column in a dataframe.</p>
+      <pre>
+        <code>
+          df.gender;
+          df['gender'];
+        </code>
+      </pre>
+      <p>Both code above can access a single series in gender column.</p>
+      <h3>Data Cleaning</h3>
+      <p>Usually, when we are dealing with dataset, there are usually some missing value</p>
+      <pre>
+        <code>
+          df.dropna();
+        </code>
+      </pre>
+      <p>The code above will delete the rows with any missing value. However, if the data size is too samll, we should not do that. The another way is imputing miss data with mean or median.</p>
+      <p>There are many methods in pandas. Here is a video I recommended for the beginners.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/vmEHCJofslg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="footer-basic">
+      <footer>
+          <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+          <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Home</a></li>
+              <li class="list-inline-item"><a href="#">Services</a></li>
+              <li class="list-inline-item"><a href="#">About</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+          </ul>
+          <p class="copyright">Company Name © 2018</p>
+      </footer>
+  </div>
+  
+     </body>
+</html>

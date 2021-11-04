@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Project Proposal</title>
+    <link rel="stylesheet" href="styles/sql.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Rock+Salt"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          Courses
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Python</a>
+          <a href="#">MySQL</a>
+          <a href="#">Machine Learning</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          Projects
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <a href="https://github.com/JasonWYZE">Github</a>
+
+      <div class="search-container">
+        <form action="">
+          <input type="text" placeholder="Search.." name="search" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="main">
+      <h2>What is a database? What is MySQL?</h2>
+      <p>
+        The database, composed of multiple tables, is used to store data. It is
+        like Excel that suitable for storing some simple text information
+      </p>
+      <ul>
+        <li>ID</li>
+        <li>Last Name</li>
+        <li>First Name</li>
+        <li>Phone number</li>
+        <li>Address</li>
+      </ul>
+      <p>However, it is difficult to store some data like</p>
+      <ul>
+        <li>Photo</li>
+        <li>Fiction</li>
+        <li>Movie</li>
+      </ul>
+      <p>
+        Those data are too large to store in the database. For instance, for
+        amazon, the information of product, store, and sale will store at
+        database while the image or video for promotion will not store in
+        database.
+      </p>
+      <p>
+        There are many types of database, relational, NoSQL, Wide column, and
+        Key-value. The most common used one, which is I will introduce later, is
+        MySQl, a relational databases software.
+      </p>
+      <h3>How to Create Database</h3>
+      <p>
+        The first step in studying MySQL is creating a simple table. We can use
+        CREATE DATABASE for creating a database in MySQL
+      </p>
+      <pre>
+            <code>
+                CREATE  TABLE IF NOT EXISTS `Member` (
+                    `member_ID` INT  AUTOINCREMENT ,
+                    `full_names` VARCHAR(150) NOT NULL ,
+                    `gender` VARCHAR(6) ,
+                    `date_of_birth` DATE ,
+                    `address` VARCHAR(255) ,
+                    `contact_number` VARCHAR(75) ,
+                    `email` VARCHAR(255) ,
+                    PRIMARY KEY (`member_ID`) )
+                    ENGINE = InnoDB;
+            </code>
+          </pre>
+      <p>
+        The code above show how to create a table with multiple columns. It also
+        set up the data type in each column. The primary key in this table is
+        student_ID.
+      </p>
+    </div>
+
+    <table class="sql">
+      <caption>
+        Member
+      </caption>
+      <thead>
+        <tr>
+          <th>member_ID</th>
+          <th>first name</th>
+          <th>last name</th>
+          <th>address</th>
+          <th>email</th>
+          <th>contact_number</th>
+          <th>gender</th>
+          <th>date_of_birth</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Ryan</td>
+          <td>Cornish</td>
+          <td>150 Elm St.</td>
+          <td>RCornish@gmail.com</td>
+          <td>(478) 692-5154</td>
+          <td>Male</td>
+          <td>12/27/1973</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Tom</td>
+          <td>Berry</td>
+          <td>133 Oak St.</td>
+          <td>TBerry@gmail.com</td>
+          <td>(496) 598-2378</td>
+          <td>Male</td>
+          <td>9/20/1998</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>Sam</td>
+          <td>Davidson</td>
+          <td>151 Maple St.</td>
+          <td>SDavidson@gmail.com</td>
+          <td>(399) 136-8181</td>
+          <td>Male</td>
+          <td>12/4/1967</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>Angela</td>
+          <td>Baker</td>
+          <td>130 Bridge St.</td>
+          <td>ABaker@gmail.com</td>
+          <td>(873) 526-1258</td>
+          <td>Female</td>
+          <td>5/2/1996</td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td>Peter</td>
+          <td>Chapman</td>
+          <td>145 Forest St.</td>
+          <td>PChapman@gmail.com</td>
+          <td>(477) 723-7749</td>
+          <td>Male</td>
+          <td>4/21/1985</td>
+        </tr>
+
+        <tr>
+          <td>6</td>
+          <td>Joanne</td>
+          <td>Glover</td>
+          <td>165 Locust St.</td>
+          <td>JGlover@gmail.com</td>
+          <td>(964) 815-8296</td>
+          <td>Female</td>
+          <td>11/11/1965</td>
+        </tr>
+
+        <tr>
+          <td>7</td>
+          <td>Jan</td>
+          <td>Ferguson</td>
+          <td>159 Oak St.</td>
+          <td>JFerguson@gmail.com</td>
+          <td>(867) 311-8369</td>
+          <td>Female</td>
+          <td>10/25/1970</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="main">
+      <p>
+        The table above show the basic information of member. It comes from the
+        East Bank Club data file which you can find it online.
+      </p>
+
+      </div>
+      <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Company Name © 2018</p>
+        </footer>
+    </div>
+
+
+  </body>
+  
+</html>
