@@ -139,3 +139,9 @@ body {
 p{
     display:block;
 }
+
+#iconze{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
