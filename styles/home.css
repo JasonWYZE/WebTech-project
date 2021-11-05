@@ -135,9 +135,7 @@ p{
   margin-bottom:0;
 }
 
-i{
-  font-size: 50px;
-}
+
 
 #icon{
   display: block;
@@ -150,4 +148,12 @@ i{
 #icon i{
   margin: 10%;
   dispaly:inline-block;
+  font-size: 50px;
+}
+
+#iconze{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
