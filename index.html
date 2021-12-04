@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Grechen Fuemen"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grechen Fuemen"/>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
     <meta name = "description" content="This website is a personal blog that sharing about skills and experience for a data analyst.">
@@ -28,6 +25,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
     />
+
+    
+    <link rel="shortcut icon" href="icon/favicon.ico ">
+
+
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -56,7 +59,19 @@
       </div>
     </div>
 
+ 
+
     <div id="main">
+
+      <p>Set up the font size of text here</p>
+
+
+      <button type="button" class = "textAdjust" value = "small">Small</button>
+      <button type="button" class = "textAdjust" value = "mid">Middle</button>
+      <button type="button" class = "textAdjust" value = "large">Large</button>
+      
+      <button type="button" class = "backgroundColor" value = "RGB">Large</button>
+
       <h2>What is this website about</h2>
       <p>
         This website is about my personal learning experience in data analyst.
@@ -120,5 +135,39 @@
         <img src="icon/favicon.ico" alt="icon" id = "iconze">
       </footer>
     </div>
+
+    <script>
+      let text = document.getElementsByClassName("textAdjust")
+
+      function textAdjust(arg){
+        let text  = document.getElementById("main")
+        console.log(arg)
+        if(arg == "small")
+        {
+          text.style.fontSize  = "small"
+        }
+        else if(arg == "mid")
+        {
+          text.style.fontSize = "medium"
+        }
+        else{
+          text.style.fontSize = "large"
+        } 
+      }
+      for(let i= 0; i<text.length;i++)
+      {
+        text[i].addEventListener("click",function(){textAdjust(text[i].value);})
+      }
+
+
+
+
+
+    
+
+    </script>
+
+
+
   </body>
 </html>
