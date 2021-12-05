@@ -87,6 +87,16 @@
               placeholder="Email Address"
             />
           </div>
+
+          <div>
+            <label for="phone">Phone Number: </label>
+            <input
+              type="text"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="Phone Number"
+            />
+          </div>
    
     
           <div>
@@ -104,7 +114,7 @@
             </div>
           </div>
    
-          <button type="submit">
+          <button type="submit" id = "submit">
             <i class="fa fa-paper-plane"></i>
           </button>
           <button type="reset">
@@ -131,5 +141,31 @@
         <img src="icon/favicon.ico" alt="icon" id = "iconze">
     </footer>
 </div>
+
+
+
+<script>
+  function validate(){
+    let lastName = document.getElementById("lastname")
+    let firstName = document.getElementById("firstname")
+    let email = document.getElementById("email")
+    let phoneNumber = document.getElementById("phoneNumber")
+    let reply = document.getElementById("comments")
+
+    if(lastName.value.length == 0 | firstName.value.length == 0 | email.value.length == 0| phoneNumber.value.length == 0 | isNaN(phoneNumber.value))
+    {
+      alert("Please enter validate contact information ")
+      return false
+    }
+    
+  }
+
+  document.getElementById("submit").onclick = function(){
+    validate()
+  }
+
+
+    
+</script>
 </body>
 </html>

@@ -62,15 +62,16 @@
  
 
     <div id="main">
+      <div>
+      <p>Set up the font size of text here <br>
+        Current font size: <span id = "fontsize"></span> </p>
 
-      <p>Set up the font size of text here</p>
-
+      </div>
 
       <button type="button" class = "textAdjust" value = "small">Small</button>
       <button type="button" class = "textAdjust" value = "mid">Middle</button>
       <button type="button" class = "textAdjust" value = "large">Large</button>
       
-      <button type="button" class = "backgroundColor" value = "RGB">Large</button>
 
       <h2>What is this website about</h2>
       <p>
@@ -87,7 +88,7 @@
         understand the model I used in my project, but also help others who is
         interested in data analyst.
       </p>
-
+      
       <p>Hope you guys enjoy!</p>
 
       </div>
@@ -138,6 +139,7 @@
 
     <script>
       let text = document.getElementsByClassName("textAdjust")
+      let size = document.getElementById("fontsize")
 
       function textAdjust(arg){
         let text  = document.getElementById("main")
@@ -145,13 +147,17 @@
         if(arg == "small")
         {
           text.style.fontSize  = "small"
+          size.innerHTML = "small"
         }
         else if(arg == "mid")
         {
           text.style.fontSize = "medium"
+          size.innerHTML = "medium"
         }
         else{
           text.style.fontSize = "large"
+          size.innerHTML = "large"
+
         } 
       }
       for(let i= 0; i<text.length;i++)

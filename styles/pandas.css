@@ -151,3 +151,9 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+
+  #panda{
+    width:50%;
+    height: 50%;
+    position:relative;
+  }

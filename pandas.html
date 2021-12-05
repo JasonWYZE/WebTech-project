@@ -42,6 +42,7 @@
 
     <div id = "main">
       <h2>Pandas</h2>
+      <img src="images/panda.png" alt="panda" id = "panda">
       <p>Pandas is the one of most useful package in the python that used for data analyst. By reading data file through index and columns, it allow us to process and deal with data. We can quickly apply complex conversion or filter data in this package. It is the first Python package I learned when I started my data analyst adventure.</p>
       <p> Pandas, Numpy, and Matplotlib are three most important and base package in data analyst. Sklearn is another a strong package for machine learning and build models. However, I believe everyone who is interested in data analyst can learn a lot in these three packages.</p>
       <h3>Import Pandas</h3>
@@ -103,6 +104,30 @@
             <img src="icon/favicon.ico" alt="icon" id = "iconze">
         </footer>
     </div>
-  
+    <script>
+      let panda = document.getElementById("panda")
+      function pandasPackage(){
+        panda.src = "images/pandas-package.png"
+      }
+
+      function pandas()
+      {
+        panda.src = "images/panda.png"
+      }
+
+
+
+
+      document.getElementById("panda").onmouseover = function(){
+        pandas();
+      }
+
+      document.getElementById("panda").onmouseout = function(){
+        pandasPackage();
+
+      }
+
+
+    </script>
      </body>
-</html>
+</html>   
