@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grechen Fuemen"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Grechen Fuemen"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
-    <meta name = "description" content="This website is a personal blog that sharing about skills and experience for a data analyst.">
-    <meta name = "keywords" content = "Python">
-    <meta name = "keywords" content = "MySQL">
-    <meta name = "keywords" content = "Data Analyst">
-    <meta name = "keywords" content = "Data Analyst Project">
-    
-    
+    <meta
+      name="description"
+      content="This website is a personal blog that sharing about skills and experience for a data analyst."
+    />
+    <meta name="keywords" content="Python" />
+    <meta name="keywords" content="MySQL" />
+    <meta name="keywords" content="Data Analyst" />
+    <meta name="keywords" content="Data Analyst Project" />
+
     <title>Index Page</title>
     <link rel="stylesheet" href="styles/home.css" />
     <link
@@ -26,27 +31,50 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
     />
 
-    
-    <link rel="shortcut icon" href="icon/favicon.ico ">
+    <link rel="shortcut icon" href="icon/favicon.ico " />
 
-
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
 
   <body>
-    <script src="https://kit.fontawesome.com/eda78dd8b6.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/eda78dd8b6.js"
+      crossorigin="anonymous"
+    ></script>
 
     <div class="topnav">
       <a class="active" href="index.html">Home</a>
-      <a href="pandas.html">Python: Pandas</a>
-      <a href="numpy.html">Python: Numpy</a>
-      <a href="mat.html">Python: Matplotlib</a>
-      <a href="sql-CreateTable.html">MySQL: Create Tabel</a>
-      <a href="sql-select.html">MySQL: Select Statement</a>
+
+      <div class="dropdown">
+
+        <button class="dropbtn">
+          Python
+          <i class="fa fa-caret-down"></i>
+        </button>
+
+        <div class="dropdown-content">
+          <a href="pandas.html">Python: Pandas</a>
+          <a href="numpy.html">Python: Numpy</a>
+          <a href="mat.html">Python: Matplotlib</a>
+        </div>
+        
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          MySQL
+          <i class="fa fa-caret-down"></i>
+        </button>
+
+        <div class="dropdown-content">
+          <a href="sql-CreateTable.html">MySQL: Create Tabel</a>
+          <a href="sql-select.html">MySQL: Select Statement</a>
+        </div>
+      </div>
+
       <a href="project1.html">Project 1</a>
       <a href="https://github.com/JasonWYZE">Github</a>
       <a href="sitemap.html">Sitemap</a>
@@ -59,19 +87,17 @@
       </div>
     </div>
 
- 
-
     <div id="main">
       <div>
-      <p>Set up the font size of text here <br>
-        Current font size: <span id = "fontsize"></span> </p>
-
+        <p>
+          Set up the font size of text here <br />
+          Current font size: <span id="fontsize"></span>
+        </p>
       </div>
 
-      <button type="button" class = "textAdjust" value = "small">Small</button>
-      <button type="button" class = "textAdjust" value = "mid">Middle</button>
-      <button type="button" class = "textAdjust" value = "large">Large</button>
-      
+      <button type="button" class="textAdjust" value="small">Small</button>
+      <button type="button" class="textAdjust" value="mid">Middle</button>
+      <button type="button" class="textAdjust" value="large">Large</button>
 
       <h2>What is this website about</h2>
       <p>
@@ -88,29 +114,23 @@
         understand the model I used in my project, but also help others who is
         interested in data analyst.
       </p>
-      
+
       <p>Hope you guys enjoy!</p>
+    </div>
 
-      </div>
-     
-
-      <div id = "icon">
+    <div id="icon">
       <a href="pandas.html">
         <i class="fab fa-python"></i>
       </a>
-  
 
-   
       <a href="sql-CreateTable.html">
         <i class="fas fa-database"></i>
       </a>
-    
-
 
       <a href="project1.html">
-      <i class="fas fa-project-diagram"></i>
+        <i class="fas fa-project-diagram"></i>
       </a>
-      </div>
+    </div>
 
     <div class="footer-basic">
       <footer>
@@ -133,47 +153,38 @@
           <li class="list-inline-item"><a href="sitemap.html">Sitemap</a></li>
         </ul>
         <p class="copyright">Jason Wang e © 2021</p>
-        <img src="icon/favicon.ico" alt="icon" id = "iconze">
+        <img src="icon/favicon.ico" alt="icon" id="iconze" />
       </footer>
     </div>
 
-    <script>
-      let text = document.getElementsByClassName("textAdjust")
-      let size = document.getElementById("fontsize")
-
-      function textAdjust(arg){
-        let text  = document.getElementById("main")
-        console.log(arg)
-        if(arg == "small")
-        {
-          text.style.fontSize  = "small"
-          size.innerHTML = "small"
-        }
-        else if(arg == "mid")
-        {
-          text.style.fontSize = "medium"
-          size.innerHTML = "medium"
-        }
-        else{
-          text.style.fontSize = "large"
-          size.innerHTML = "large"
-
-        } 
-      }
-      for(let i= 0; i<text.length;i++)
-      {
-        text[i].addEventListener("click",function(){textAdjust(text[i].value);})
-      }
-
-
-
-
 
     
+    <script>
+      let text = document.getElementsByClassName("textAdjust");
+      let size = document.getElementById("fontsize");
 
+      function textAdjust(arg) {
+        let text = document.getElementById("main");
+        console.log(arg);
+        if (arg == "small") {
+          text.style.fontSize = "small";
+          size.innerHTML = "small";
+        } else if (arg == "mid") {
+          text.style.fontSize = "medium";
+          size.innerHTML = "medium";
+        } else {
+          text.style.fontSize = "large";
+          size.innerHTML = "large";
+        }
+      }
+
+      for (let i = 0; i < text.length; i++) {
+        text[i].addEventListener("click", function () {
+          textAdjust(text[i].value);
+        });
+      }
+
+   
     </script>
-
-
-
   </body>
 </html>
