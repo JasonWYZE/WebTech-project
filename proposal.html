@@ -3,29 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name = "description" content="This website is a personal blog that sharing about skills and experience for a data analyst.">
-    <meta name = "keywords" content = "Python">
-    <meta name = "keywords" content = "MySQL">
-    <meta name = "keywords" content = "Data Analyst">
-    <meta name = "keywords" content = "Data Analyst Project">
+    <meta
+      name="description"
+      content="This website is a personal blog that sharing about skills and experience for a data analyst."
+    />
+    <meta name="keywords" content="Python" />
+    <meta name="keywords" content="MySQL" />
+    <meta name="keywords" content="Data Analyst" />
+    <meta name="keywords" content="Data Analyst Project" />
     <title>Project Proposal</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="styles/home.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+
+    <link rel="stylesheet" href="styles/home.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    
   </head>
-  <link rel="shortcut icon" href="icon/favicon.ico ">
+  <link rel="shortcut icon" href="icon/favicon.ico " />
   <body>
+    <script
+      src="https://kit.fontawesome.com/eda78dd8b6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
     <div class="topnav">
       <a class="active" href="index.html">Home</a>
 
       <div class="dropdown">
-
         <button class="dropbtn">
           Python
           <i class="fa fa-caret-down"></i>
@@ -36,7 +57,6 @@
           <a href="numpy.html">Python: Numpy</a>
           <a href="mat.html">Python: Matplotlib</a>
         </div>
-        
       </div>
 
       <div class="dropdown">
@@ -52,65 +72,115 @@
       </div>
 
       <a href="project1.html">Project 1</a>
-      <a href="https://github.com/JasonWYZE">Github</a>
+      <a href="contact.html">Contact US</a>
       <a href="sitemap.html">Sitemap</a>
 
       <div class="search-container">
-        <form action="">
+        <form action="" class="search-bar">
           <input type="text" placeholder="Search.." name="search" />
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
     </div>
-    <div class = "main">
-    <h1>Project Proposal</h1>
-    <hr/>
-    <h3>What is it about</h3>
-    <p>
-      This website is about my personal learning experience in data analyst. It will
-      introduce what skills you need to learn in order to be a data analyst. I will
-      introduce the three main packages in python for data analyst, which are numpy, 
-      pandas, and Matplotlib. Besides, it also include the reflection and code of my 
-      previous data analyst project.
-    </p>
-    <hr/>
-    <h3>What is the objective of my website</h3>
-    <p>
-      This website is used for sharing my personal experience since I was very confused 
-      when I frst start self learn those skills. By sharing those experiences and 
-      teach to my audience, it not only help me further understand the model I used 
-      in my project, but also help others who is interested in data analyst.    
-    </p>
-    <hr/>
-    <h3>Who is your target audience</h3>
-    <p>
-    My audiences are people who are interested in data analyst. Since data analyst 
-      can be applied in multiple industries, I believe this is where the future is. 
-    </p>
-    <hr/>
-    <h3>What contents will each page include</h3>
-    <p>
-    I think there should be at least 4 pages, which are pandas, numpy, Matplotlib, 
-    and one project. For first three pages, the page should include the what it is, 
-    how to install, and some common function in those packages. For the project, the 
-    page should include what is it about, the code of the project, and the analyst of the result.
-    </p>
-  </div>
+
+    <div id="main">
+      <div>
+        <p>
+          Set up the font size of text here <br />
+          Current font size: <span id="fontsize"></span>
+        </p>
+      </div>
+
+      <button type="button" class="textAdjust" value="small">Small</button>
+      <button type="button" class="textAdjust" value="mid">Middle</button>
+      <button type="button" class="textAdjust" value="large">Large</button>
+      <h1>Project Proposal</h1>
+      <hr />
+      <h3>What is it about</h3>
+      <p>
+        This website is about my personal learning experience in data analyst.
+        It will introduce what skills you need to learn in order to be a data
+        analyst. I will introduce the three main packages in python for data
+        analyst, which are numpy, pandas, and Matplotlib. Besides, it also
+        include the reflection and code of my previous data analyst project.
+      </p>
+      <hr />
+      <h3>What is the objective of my website</h3>
+      <p>
+        This website is used for sharing my personal experience since I was very
+        confused when I frst start self learn those skills. By sharing those
+        experiences and teach to my audience, it not only help me further
+        understand the model I used in my project, but also help others who is
+        interested in data analyst.
+      </p>
+      <hr />
+      <h3>Who is your target audience</h3>
+      <p>
+        My audiences are people who are interested in data analyst. Since data
+        analyst can be applied in multiple industries, I believe this is where
+        the future is.
+      </p>
+      <hr />
+      <h3>What contents will each page include</h3>
+      <p>
+        I think there should be at least 4 pages, which are pandas, numpy,
+        Matplotlib, and one project. For first three pages, the page should
+        include the what it is, how to install, and some common function in
+        those packages. For the project, the page should include what is it
+        about, the code of the project, and the analyst of the result.
+      </p>
+    </div>
 
     <div class="footer-basic">
       <footer>
-          <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-          <ul class="list-inline">
-              <li class="list-inline-item"><a href="#">Home</a></li>
-              <li class="list-inline-item"><a href="#">Services</a></li>
-              <li class="list-inline-item"><a href="#">About</a></li>
-              <li class="list-inline-item"><a href="#">Terms</a></li>
-              <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-          </ul>
-          <p class="copyright">Company Name © 2018</p>
-          <img src="icon/favicon.ico" alt="icon" id = "iconze">
+        <div class="social">
+          <a href="https://www.instagram.com/jasonwang0241/"
+            ><i class="icon ion-social-instagram"></i></a
+          ><a href="https://github.com/JasonWYZE"
+            ><ion-icon name="logo-github"></ion-icon></a
+          ><a href="#"><i class="icon ion-social-twitter"></i></a
+          ><a href="#"><i class="icon ion-social-facebook"></i></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="sitemap.html">Home</a></li>
+          <li class="list-inline-item"><a href="pandas.html">Python</a></li>
+          <li class="list-inline-item">
+            <a href="sql-CreateTable.html">MySQL</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="contact.html">Contact US</a>
+          </li>
+          <li class="list-inline-item"><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+        <p class="copyright">Jason Wang e © 2021</p>
+        <img src="icon/favicon.ico" alt="icon" id="iconze" />
       </footer>
-  </div>
-  
+    </div>
+
+    <script>
+      let text = document.getElementsByClassName("textAdjust");
+      let size = document.getElementById("fontsize");
+
+      function textAdjust(arg) {
+        let text = document.getElementById("main");
+        console.log(arg);
+        if (arg == "small") {
+          text.style.fontSize = "small";
+          size.innerHTML = "small";
+        } else if (arg == "mid") {
+          text.style.fontSize = "medium";
+          size.innerHTML = "medium";
+        } else {
+          text.style.fontSize = "large";
+          size.innerHTML = "large";
+        }
+      }
+
+      for (let i = 0; i < text.length; i++) {
+        text[i].addEventListener("click", function () {
+          textAdjust(text[i].value);
+        });
+      }
+    </script>
   </body>
 </html>

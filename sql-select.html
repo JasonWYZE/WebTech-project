@@ -25,11 +25,24 @@
     
   </head>
   <body>
+    <script
+      src="https://kit.fontawesome.com/eda78dd8b6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
     <div class="topnav">
       <a class="active" href="index.html">Home</a>
 
       <div class="dropdown">
-
         <button class="dropbtn">
           Python
           <i class="fa fa-caret-down"></i>
@@ -40,7 +53,6 @@
           <a href="numpy.html">Python: Numpy</a>
           <a href="mat.html">Python: Matplotlib</a>
         </div>
-        
       </div>
 
       <div class="dropdown">
@@ -56,18 +68,29 @@
       </div>
 
       <a href="project1.html">Project 1</a>
-      <a href="https://github.com/JasonWYZE">Github</a>
+      <a href="contact.html">Contact US</a>
       <a href="sitemap.html">Sitemap</a>
 
       <div class="search-container">
-        <form action="">
+        <form action="" class="search-bar">
           <input type="text" placeholder="Search.." name="search" />
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
     </div>
 
-    <div class ="main">
+    <div id="main">
+      <div>
+        <p>
+          Set up the font size of text here <br />
+          Current font size: <span id="fontsize"></span>
+        </p>
+      </div>
+
+      <button type="button" class="textAdjust" value="small">Small</button>
+      <button type="button" class="textAdjust" value="mid">Middle</button>
+      <button type="button" class="textAdjust" value="large">Large</button>
+
         <h2>SQL SELECT statement</h2>
         <p>It is the most frequently used SQL command and it can access the database and select specific information you want.</p>
         <p>Some common applications of SELECT: </p>
@@ -78,7 +101,7 @@
             </code>
         </pre>
         <p>Output:</p>
-        </div>
+        
 
         
         <table class="sql">
@@ -142,7 +165,7 @@
             </tbody>
          </table>
         
-    <div class = "main">
+
         <p>As we can see, all the members in this table are male since we add the conditional statement "where". The * refer to all columns. We can also change it to any specific column we are look for. from 'student' refer to which table we are looking since a database was composed of multiple tables.</p>
     <p>
         If we want to see the male member and sort at order by birth date, we
@@ -154,7 +177,7 @@
           order by 'date_of_birth' ASC
         </code>
       </pre>
-    </div>
+ 
 
     <table class="sql">
       <caption>
@@ -219,28 +242,66 @@
       </tbody>
     </table>
 
-    <div class ="main">
       <p>Same as last one, the only difference we made here is adding the order by with the data of birth columns and ASC means ascending. </p>
       <p>There are many way to use MySQL. For instance, adding limit at the end will let the query show limit amount of result. Group by is another way to show the data. For instance, if you are looking for different gender of member, you can use 'group by 'gender''. Another useful way in MySQL is join, which will combine multiple tables together so you can access data from different tables.</p>
       <p>Here is a website I used when I was learning MySQL. You can practice on it and I believe you can learn a lot from it!</p>
       <a href = "https://sqlzoo.net/wiki/SELECT_basics">MySQL Practice</a>
     </div>
 
+   
     <div class="footer-basic">
       <footer>
-          <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-          <ul class="list-inline">
-              <li class="list-inline-item"><a href="sitemap.html">Home</a></li>
-              <li class="list-inline-item"><a href="pandas.html">Python</a></li>
-              <li class="list-inline-item"><a href="sql-CreateTable.html">MySQL</a></li>
-              <li class="list-inline-item"><a href="contact.html">Contact US</a></li>
-              <li class="list-inline-item"><a href="sitemap.html">Sitemap</a></li>
-          </ul>
-          <p class="copyright"> Jason Wang e © 2021</p>
-          <img src="icon/favicon.ico" alt="icon" id = "iconze">
+        <div class="social">
+          <a href="https://www.instagram.com/jasonwang0241/"
+            ><i class="icon ion-social-instagram"></i></a
+          ><a href="https://github.com/JasonWYZE"
+            ><ion-icon name="logo-github"></ion-icon></a
+          ><a href="#"><i class="icon ion-social-twitter"></i></a
+          ><a href="#"><i class="icon ion-social-facebook"></i></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="sitemap.html">Home</a></li>
+          <li class="list-inline-item"><a href="pandas.html">Python</a></li>
+          <li class="list-inline-item">
+            <a href="sql-CreateTable.html">MySQL</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="contact.html">Contact US</a>
+          </li>
+          <li class="list-inline-item"><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+        <p class="copyright">Jason Wang e © 2021</p>
+        <img src="icon/favicon.ico" alt="icon" id="iconze" />
       </footer>
-  </div>
+    </div>
 
+
+    
+    <script>
+      let text = document.getElementsByClassName("textAdjust");
+      let size = document.getElementById("fontsize");
+
+      function textAdjust(arg) {
+        let text = document.getElementById("main");
+        console.log(arg);
+        if (arg == "small") {
+          text.style.fontSize = "small";
+          size.innerHTML = "small";
+        } else if (arg == "mid") {
+          text.style.fontSize = "medium";
+          size.innerHTML = "medium";
+        } else {
+          text.style.fontSize = "large";
+          size.innerHTML = "large";
+        }
+      }
+
+      for (let i = 0; i < text.length; i++) {
+        text[i].addEventListener("click", function () {
+          textAdjust(text[i].value);
+        });
+      }
+    </script>
     
 
     </body>

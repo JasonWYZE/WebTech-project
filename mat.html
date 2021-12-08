@@ -20,6 +20,10 @@
     <link rel="shortcut icon" href="icon/favicon.ico ">
   </head>
   <body>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     <div class="topnav">
       <a class="active" href="index.html">Home</a>
 
@@ -51,18 +55,31 @@
       </div>
 
       <a href="project1.html">Project 1</a>
-      <a href="https://github.com/JasonWYZE">Github</a>
+      <a href="contact.html">Contact US</a>
       <a href="sitemap.html">Sitemap</a>
 
       <div class="search-container">
-        <form action="">
+        <form action="" class = "search-bar">
           <input type="text" placeholder="Search.." name="search" />
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
+      
     </div>
 
     <div id="main">
+      <div>
+        <p>
+          Set up the font size of text here <br />
+          Current font size: <span id="fontsize"></span>
+        </p>
+      </div>
+
+      <button type="button" class="textAdjust" value="small">Small</button>
+      <button type="button" class="textAdjust" value="mid">Middle</button>
+      <button type="button" class="textAdjust" value="large">Large</button>
+
+    
       <h2>Matplotlib</h2>
       <p>
         It is very helpful when you show the data visualization since it can
@@ -120,21 +137,63 @@
     <img src="images/ax.png" alt="output of ax" title = "ax">
     <p>As we can see, the code above generate 6 graphs and the first rows, as the code write, are all positive slope and the second are all negative slope. There are many functions in matplotlib that support different graphs (e.g scatter plot, bar graph, histogram). Here is a video that I found on Youtube which I believe you can learn more in this video. </p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/UO98lJQ3QGI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
     <div class="footer-basic">
       <footer>
-          <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-          <ul class="list-inline">
-              <li class="list-inline-item"><a href="sitemap.html">Home</a></li>
-              <li class="list-inline-item"><a href="pandas.html">Python</a></li>
-              <li class="list-inline-item"><a href="sql-CreateTable.html">MySQL</a></li>
-              <li class="list-inline-item"><a href="contact.html">Contact US</a></li>
-              <li class="list-inline-item"><a href="sitemap.html">Sitemap</a></li>
-          </ul>
-          <p class="copyright"> Jason Wang e © 2021</p>
-          <img src="icon/favicon.ico" alt="icon" id = "iconze">
+        <div class="social">
+          <a href="https://www.instagram.com/jasonwang0241/"
+            ><i class="icon ion-social-instagram"></i></a
+          ><a href="https://github.com/JasonWYZE"><ion-icon name="logo-github"></ion-icon></a
+          ><a href="#"><i class="icon ion-social-twitter"></i></a
+          ><a href="#"><i class="icon ion-social-facebook"></i></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="sitemap.html">Home</a></li>
+          <li class="list-inline-item"><a href="pandas.html">Python</a></li>
+          <li class="list-inline-item">
+            <a href="sql-CreateTable.html">MySQL</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="contact.html">Contact US</a>
+          </li>
+          <li class="list-inline-item"><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+        <p class="copyright">Jason Wang e © 2021</p>
+        <img src="icon/favicon.ico" alt="icon" id="iconze" />
+
+
       </footer>
-  </div>
-  
-  </div>
+    </div>
+
+
+    
+    <script>
+      let text = document.getElementsByClassName("textAdjust");
+      let size = document.getElementById("fontsize");
+
+      function textAdjust(arg) {
+        let text = document.getElementById("main");
+        console.log(arg);
+        if (arg == "small") {
+          text.style.fontSize = "small";
+          size.innerHTML = "small";
+        } else if (arg == "mid") {
+          text.style.fontSize = "medium";
+          size.innerHTML = "medium";
+        } else {
+          text.style.fontSize = "large";
+          size.innerHTML = "large";
+        }
+      }
+
+      for (let i = 0; i < text.length; i++) {
+        text[i].addEventListener("click", function () {
+          textAdjust(text[i].value);
+        });
+      }
+
+   
+    </script>
   </body>
 </html>

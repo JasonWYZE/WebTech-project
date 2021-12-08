@@ -20,11 +20,24 @@
     <link rel="shortcut icon" href="icon/favicon.ico ">
   </head>
   <body>
+    <script
+      src="https://kit.fontawesome.com/eda78dd8b6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
     <div class="topnav">
       <a class="active" href="index.html">Home</a>
 
       <div class="dropdown">
-
         <button class="dropbtn">
           Python
           <i class="fa fa-caret-down"></i>
@@ -35,7 +48,6 @@
           <a href="numpy.html">Python: Numpy</a>
           <a href="mat.html">Python: Matplotlib</a>
         </div>
-        
       </div>
 
       <div class="dropdown">
@@ -51,11 +63,11 @@
       </div>
 
       <a href="project1.html">Project 1</a>
-      <a href="https://github.com/JasonWYZE">Github</a>
+      <a href="contact.html">Contact US</a>
       <a href="sitemap.html">Sitemap</a>
 
       <div class="search-container">
-        <form action="">
+        <form action="" class="search-bar">
           <input type="text" placeholder="Search.." name="search" />
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
@@ -64,6 +76,17 @@
 
 
     <div id = "main">
+      <div>
+        <p>
+          Set up the font size of text here <br />
+          Current font size: <span id="fontsize"></span>
+        </p>
+      </div>
+
+      <button type="button" class="textAdjust" value="small">Small</button>
+      <button type="button" class="textAdjust" value="mid">Middle</button>
+      <button type="button" class="textAdjust" value="large">Large</button>
+
       <h2>Pandas</h2>
       <img src="images/panda.png" alt="panda" id = "panda">
       <p>Pandas is the one of most useful package in the python that used for data analyst. By reading data file through index and columns, it allow us to process and deal with data. We can quickly apply complex conversion or filter data in this package. It is the first Python package I learned when I started my data analyst adventure.</p>
@@ -112,21 +135,33 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/vmEHCJofslg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
-
     <div class="footer-basic">
-        <footer>
-            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="sitemap.html">Home</a></li>
-                <li class="list-inline-item"><a href="pandas.html">Python</a></li>
-                <li class="list-inline-item"><a href="sql-CreateTable.html">MySQL</a></li>
-                <li class="list-inline-item"><a href="contact.html">Contact US</a></li>
-                <li class="list-inline-item"><a href="sitemap.html">Sitemap</a></li>
-            </ul>
-            <p class="copyright"> Jason Wang e © 2021</p>
-            <img src="icon/favicon.ico" alt="icon" id = "iconze">
-        </footer>
+      <footer>
+        <div class="social">
+          <a href="https://www.instagram.com/jasonwang0241/"
+            ><i class="icon ion-social-instagram"></i></a
+          ><a href="https://github.com/JasonWYZE"
+            ><ion-icon name="logo-github"></ion-icon></a
+          ><a href="#"><i class="icon ion-social-twitter"></i></a
+          ><a href="#"><i class="icon ion-social-facebook"></i></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="sitemap.html">Home</a></li>
+          <li class="list-inline-item"><a href="pandas.html">Python</a></li>
+          <li class="list-inline-item">
+            <a href="sql-CreateTable.html">MySQL</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="contact.html">Contact US</a>
+          </li>
+          <li class="list-inline-item"><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+        <p class="copyright">Jason Wang e © 2021</p>
+        <img src="icon/favicon.ico" alt="icon" id="iconze" />
+      </footer>
     </div>
+
+
     <script>
       let panda = document.getElementById("panda")
       function pandasPackage(){
@@ -148,6 +183,30 @@
       document.getElementById("panda").onmouseout = function(){
         pandasPackage();
 
+      }
+
+      let text = document.getElementsByClassName("textAdjust");
+      let size = document.getElementById("fontsize");
+
+      function textAdjust(arg) {
+        let text = document.getElementById("main");
+        console.log(arg);
+        if (arg == "small") {
+          text.style.fontSize = "small";
+          size.innerHTML = "small";
+        } else if (arg == "mid") {
+          text.style.fontSize = "medium";
+          size.innerHTML = "medium";
+        } else {
+          text.style.fontSize = "large";
+          size.innerHTML = "large";
+        }
+      }
+
+      for (let i = 0; i < text.length; i++) {
+        text[i].addEventListener("click", function () {
+          textAdjust(text[i].value);
+        });
       }
 
 

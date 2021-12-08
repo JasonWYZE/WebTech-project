@@ -30,11 +30,24 @@
     />
   </head>
   <body>
+    <script
+      src="https://kit.fontawesome.com/eda78dd8b6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
     <div class="topnav">
       <a class="active" href="index.html">Home</a>
 
       <div class="dropdown">
-
         <button class="dropbtn">
           Python
           <i class="fa fa-caret-down"></i>
@@ -45,7 +58,6 @@
           <a href="numpy.html">Python: Numpy</a>
           <a href="mat.html">Python: Matplotlib</a>
         </div>
-        
       </div>
 
       <div class="dropdown">
@@ -61,11 +73,11 @@
       </div>
 
       <a href="project1.html">Project 1</a>
-      <a href="https://github.com/JasonWYZE">Github</a>
+      <a href="contact.html">Contact US</a>
       <a href="sitemap.html">Sitemap</a>
 
       <div class="search-container">
-        <form action="">
+        <form action="" class="search-bar">
           <input type="text" placeholder="Search.." name="search" />
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
@@ -73,6 +85,17 @@
     </div>
 
     <div id="main">
+      <div>
+        <p>
+          Set up the font size of text here <br />
+          Current font size: <span id="fontsize"></span>
+        </p>
+      </div>
+
+      <button type="button" class="textAdjust" value="small">Small</button>
+      <button type="button" class="textAdjust" value="mid">Middle</button>
+      <button type="button" class="textAdjust" value="large">Large</button>
+
       <h2>Amazon Product in RFM model with K-Means</h2>
       <p>This project is basically based on the data file of amazon product. Based on the value of each customers, divide customer into multiple class. It is also called RFM model. In this project, I use k-means to further classified customers.  </p>
       <div class="codearea">
@@ -132,11 +155,14 @@
   </div>
     </div>
 
+ 
     <div class="footer-basic">
       <footer>
         <div class="social">
-          <a href="#"><i class="icon ion-social-instagram"></i></a
-          ><a href="#"><i class="icon ion-social-snapchat"></i></a
+          <a href="https://www.instagram.com/jasonwang0241/"
+            ><i class="icon ion-social-instagram"></i></a
+          ><a href="https://github.com/JasonWYZE"
+            ><ion-icon name="logo-github"></ion-icon></a
           ><a href="#"><i class="icon ion-social-twitter"></i></a
           ><a href="#"><i class="icon ion-social-facebook"></i></a>
         </div>
@@ -152,8 +178,36 @@
           <li class="list-inline-item"><a href="sitemap.html">Sitemap</a></li>
         </ul>
         <p class="copyright">Jason Wang e © 2021</p>
-        <img src="icon/favicon.ico" alt="icon" id = "iconze">
+        <img src="icon/favicon.ico" alt="icon" id="iconze" />
       </footer>
     </div>
+
+
+    
+    <script>
+      let text = document.getElementsByClassName("textAdjust");
+      let size = document.getElementById("fontsize");
+
+      function textAdjust(arg) {
+        let text = document.getElementById("main");
+        console.log(arg);
+        if (arg == "small") {
+          text.style.fontSize = "small";
+          size.innerHTML = "small";
+        } else if (arg == "mid") {
+          text.style.fontSize = "medium";
+          size.innerHTML = "medium";
+        } else {
+          text.style.fontSize = "large";
+          size.innerHTML = "large";
+        }
+      }
+
+      for (let i = 0; i < text.length; i++) {
+        text[i].addEventListener("click", function () {
+          textAdjust(text[i].value);
+        });
+      }
+    </script>
   </body>
 </html>
