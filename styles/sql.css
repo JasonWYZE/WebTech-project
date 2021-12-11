@@ -36,7 +36,7 @@
   
   body {
     margin: 0;
-    background-color: rgb(237, 241, 250);
+    background-color: #6c757d61;
     font-family: Arial, Helvetica, sans-serif;
   }
   
@@ -252,13 +252,13 @@ code{
   }
   
   @media only screen and (max-width: 856px){
-    .topnav a, .dropdown{
-      width:100%
-    }
+    .topnav a, .dropdown {
+      width: auto;
+      margin: auto;
+      }
   
     .search-container{
-      width: 100%;
+      width: auto;
       text-align: center;
     }
   }
-  
